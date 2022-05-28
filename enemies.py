@@ -1,19 +1,21 @@
 import items
-import random
-class enemy():
-    def __init__(self, hpmin, hpmax, dmgmin, dmgmax, spd, inv):
-        self.hpmin = hpmin
-        self.hpmax = hpmax
-        self.dmgmin = dmgmin
-        self.dmgmax = dmgmax
+
+
+class Enemy:
+    def __init__(self, hp_min, hp_max, dmg_min, dmg_max, spd, inv):
+        self.hp_min = hp_min
+        self.hp_max = hp_max
+        self.dmg_min = dmg_min
+        self.dmg_max = dmg_max
         self.spd = spd
         self.inv = inv
 
-enemylist = {
+
+enemy_list = {
     'undead': {
-        'Skeleton': enemy(4, 6, 1, 2, 3, ['Bone']),
+        'Skeleton': Enemy(4, 6, 1, 2, 3, ['Bone']),
     },
     'nature': {
-        'Bear': enemy(10, 20, 6, 12, 6, [])
+        'Bear': Enemy(10, 20, 6, 12, 6, [])
     }
 }
